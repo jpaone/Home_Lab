@@ -37,32 +37,20 @@ This led to building a monitoring stack around Prometheus, Grafana, Loki, Promta
 ---
 
 ## Screenshots
-
-> Note: Screenshots should be reviewed and redacted before publishing. Anything showing private hostnames, IPs, user accounts, tokens, passwords, family names, or internal-only details should be removed or blurred.
-
-Recommended screenshot paths for this section:
-
-```text
-assets/screenshots/portainer-main-environments.png
-assets/screenshots/portainer-dell-container-list.png
-assets/screenshots/portainer-dell-monitoring-containers.png
-assets/screenshots/portainer-dell-stacks-list.png
-assets/screenshots/portainer-synology-container-list.png
-assets/screenshots/portainer-synology-stacks-list.png
-```
-
-Example Markdown references:
-
-```markdown
 ![Portainer environments overview](../assets/screenshots/portainer-main-environments.png)
+
+![Dell Micro container list](../assets/screenshots/portainer-dell-container-list.png)
 
 ![Dell Micro monitoring containers](../assets/screenshots/portainer-dell-monitoring-containers.png)
 
 ![Dell Micro stacks list](../assets/screenshots/portainer-dell-stacks-list.png)
-```
 
+![Synology container list](../assets/screenshots/portainer-synology-container-list.png)
+
+![Synology stacks list](../assets/screenshots/portainer-synology-stacks-list.png)
+
+![Prometheus targets](../assets/screenshots/prometheus-targets-redacted.png)
 ---
-
 ## Portainer Environment Overview
 
 Portainer is used to manage Docker environments across both the Synology NAS and the Dell Micro. This gives me a cleaner way to view containers, stacks, images, volumes, and environment status from one interface.
@@ -72,9 +60,7 @@ The two main Docker environments are:
 | Environment | Role |
 |---|---|
 | Synology NAS | Storage-oriented services, NAS-side containers, Home Assistant, iCloudPD, testing workloads. |
-| Dell Micro Docker | Main Docker compute host for monitoring, Immich, Pi-hole, Open-WebUI/Ollama, and active service workloads. |
-
-The Portainer overview is useful because it quickly shows the split between the two hosts. The Synology has fewer active containers and remains more storage-focused, while the Dell Micro carries more of the active Docker workload.
+| Dell Micro Docker | Main Docker compute host for monitoring, Immich, Pi-hole, Open-WebUI/Ollama, and active service workloads. 
 
 ---
 
@@ -246,30 +232,3 @@ This stack had several real troubleshooting moments while being built and adjust
 - SNMP Exporter produced version/configuration warnings during testing.
 - Bad configuration changes caused some containers to restart until the config was corrected.
 - Monitoring experiments contributed to host-level inotify/watch warnings, which required additional investigation.
-
-These issues are part of why the stack is worth documenting. The final configuration matters, but the troubleshooting process is where much of the practical learning happened.
-
----
-
-## Lessons Learned
-
-- Default ports are convenient until multiple services need the same ones.
-- Monitoring stacks depend heavily on clean YAML and consistent volume paths.
-- Managing related services as a Portainer Stack is easier than treating each container separately.
-- Metrics and logs are more useful when they are planned together instead of added randomly.
-- The Dell Micro is a better fit than the Synology for active monitoring workloads because it has more compute available and behaves like a standard Linux Docker host.
-- Redacting screenshots and configs is part of the documentation process when publishing homelab work publicly.
-
----
-
-## Future Improvements
-
-- Add screenshots of Prometheus targets.
-- Add Grafana dashboard screenshots with sensitive data removed.
-- Add a simple architecture diagram showing metrics and log flow.
-- Add Prometheus scrape configuration examples.
-- Add Loki/Promtail configuration examples.
-- Add notes for SNMP monitoring of DD-WRT and Synology.
-- Create a troubleshooting entry for the Prometheus YAML error.
-- Create a troubleshooting entry for Grafana/Prometheus port conflicts.
-
