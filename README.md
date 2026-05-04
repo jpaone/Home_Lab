@@ -165,7 +165,7 @@ Primary responsibilities:
 | Portainer Agent  | Docker management                | Dell Micro                        | Used for container visibility and management.                                                                            |
 | Immich           | Self-hosted photo backup         | Dell Micro / NAS storage workflow | Used as a self-hosted family photo backup and iCloud-style alternative.                                                  |
 | Open-WebUI       | Local AI web frontend            | Dell Micro                        | LAN-accessible frontend for local LLM testing.                                                                           |
-| Ollama           | Local LLM backend                | Dell Micro                        | Provides local model API for Open-WebUI.                                                                                 |
+| Ollama           | Local LLM backend                | Dell Micro                        | Provides local model API for Open-WebUI.  - Testing Phase Currently                                                                               |
 | Home Assistant   | Home automation                  | Synology                          | Runs on the NAS side.                                                                                                    |
 | iCloudPD         | iCloud photo sync                | Synology                          | Syncs iCloud photos into NAS storage. Current path: `/volume1/photo/icloud_james`.                                       |
 | Portainer CE     | Docker management                | Synology                          | Used for NAS-side container management.                                                                                  |
