@@ -245,5 +245,5 @@ Important lessons so far:
 
 ## Documentation
 
-- [Monitoring Stack](docs/monitoring-stack.md) — Prometheus, Grafana, Loki, Promtail, cAdvisor, Node Exporter, Pi-hole Exporter, and SNMP Exporter.
+- [Monitoring Stack](docs/monitoring_stack_documentation.md) — Prometheus, Grafana, Loki, Promtail, cAdvisor, Node Exporter, Pi-hole Exporter, and SNMP Exporter.
 
