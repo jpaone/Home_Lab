@@ -1,28 +1,41 @@
-# Homelab Infrastructure
+# Homelab
 
-This repository documents my personal homelab environment and the systems I use to practice IT support, systems administration, networking, monitoring, self-hosting, and security concepts. The homelab gives me a practical environment to build real services, troubleshoot failures, test configurations, and document repeatable technical processes.
+This repo is my attempt to finally document my homelab in a more organized way.
 
-The environment includes a mix of Linux servers, Docker containers, Synology NAS storage, network services, monitoring tools, remote access, backups, and self-hosted applications. While this is a personal lab, the work mirrors many of the same responsibilities found in professional IT environments: maintaining services, managing access, monitoring system health, documenting changes, and resolving issues when things break.
+I’ve been building pieces of this environment over the last few years — sometimes to learn something specific, sometimes to solve a real problem at home, and sometimes just because I wanted to see if I could get something working. At some point I realized that the actual value was not just in having the services running, but in being able to explain what I built, why I built it, how it works, and what I learned along the way.
 
-## Areas Covered
+So this repository is a bit of a “going back and writing it down” project.
+
+The goal is not to present a perfect enterprise environment. This is a real homelab, which means some things were built cleanly, some things were figured out through trial and error, and a few things probably changed three times before landing where they are now. I want this repo to capture that process honestly: the setup, the decisions, the mistakes, the fixes, and the improvements over time.
+
+## What this homelab includes
+
+This environment includes a mix of:
 
 - Linux server administration
 - Docker and Docker Compose
-- Self-hosted applications and services
+- Portainer-managed services
 - Synology NAS storage and backup planning
-- DNS filtering and troubleshooting with Pi-hole
-- Monitoring with Prometheus, Grafana, Loki, and exporters
-- Log collection and troubleshooting workflows
-- Remote access using Tailscale
-- Local AI services using Ollama and Open-WebUI
-- Photo backup and management using Immich
-- Network troubleshooting and service availability
-- Documentation of configurations, decisions, and lessons learned
+- Pi-hole DNS filtering
+- Tailscale remote access
+- Prometheus, Grafana, Loki, and related monitoring tools
+- Immich for self-hosted photo backup
+- Ollama and Open-WebUI for local AI testing
+- General networking, troubleshooting, and service maintenance
 
-## Purpose
+## Why I’m documenting it
 
-I use this homelab as a hands-on learning and testing environment. It helps me strengthen practical skills across infrastructure, networking, cloud-adjacent services, endpoint support, monitoring, and security. This repository is meant to show not just what tools I have used, but how I think through setup, troubleshooting, documentation, and long-term maintainability.
+I started this repo because I realized I did not have a great way to show the hands-on work I’ve been doing outside of certifications and formal training. A lot of my learning has come from building real systems, breaking things, fixing them, and then improving the setup afterward.
 
-## Privacy and Sanitization
+This documentation is meant to show the practical side of that work:
 
-Some details in this repository have been generalized or removed before publishing, including internal IP addresses, usernames, hostnames, family information, tokens, secrets, and screenshots containing account-specific details. The goal is to document the technical architecture and troubleshooting process without exposing sensitive personal or network information.
+- What I built
+- Why I made certain choices
+- How services are connected
+- What problems came up
+- How I troubleshot them
+- What I would improve next
+
+## Note
+
+Some details may be generalized or removed before publishing, including usernames, internal hostnames, IP addresses, screenshots, tokens, passwords, and anything else that should not be public. The goal is to document the technical work without exposing sensitive information.
