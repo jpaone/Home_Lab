@@ -49,7 +49,6 @@ This led to building a monitoring stack around Prometheus, Grafana, Loki, Promta
 
 ![Synology stacks list](../assets/screenshots/portainer-synology-stacks-list.png)
 
-![Prometheus targets](../assets/screenshots/prometheus-targets-redacted.png)
 ---
 ## Portainer Environment Overview
 
