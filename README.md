@@ -218,30 +218,9 @@ Some issues encountered while building this stack:
 * Docker container restart loops during bad config deployments.
 * Inotify/watch exhaustion warnings during monitoring experiments.
 
-Planned documentation:
-
-* Prometheus scrape configuration
-* Grafana dashboard setup
-* Loki and Promtail setup
-* Pi-hole metrics dashboard
-* Docker/container monitoring dashboard
-* Troubleshooting notes from failed configs
-
----
-
 ## Storage and Backup Notes
 
 Storage is split between the Dell Micro service host and the Synology NAS. The NAS is the main long-term storage system, while the Dell Micro handles active services.
-
-Current storage-related themes:
-
-* Synology NAS as the main storage platform
-* Immich/photo backup workflows
-* iCloudPD syncing into NAS storage
-* External USB drive workflows
-* Time Machine planning
-* AWS S3/Glacier backup exploration
-* Local media/archive storage planning
 
 Current backup approach:
 
@@ -250,17 +229,6 @@ Current backup approach:
 * Glacier transition is configured within 24 hours because this data is mostly archival and not frequently modified.
 * Time Machine backups are provided through the Synology using a dedicated WD USB drive as the backup target.
 * The Time Machine setup is intentionally simple so household devices can perform regular incremental backups without needing a complicated workflow.
-
-Planned documentation:
-
-* Synology storage layout
-* Photo backup workflow
-* iCloudPD sync notes
-* Immich storage relationship
-* External drive and Time Machine notes
-* AWS cold-storage backup plan
-
----
 
 ## Remote Access
 
@@ -275,74 +243,7 @@ Important lessons so far:
 * Family access needs to be simple enough that non-technical users can reliably use it.
 * Immich remote access needs to balance convenience, privacy, and operational simplicity.
 
-Planned documentation:
+## Documentation
 
-* Tailscale setup overview
-* Immich remote access workflow
-* Family device onboarding notes
-* Subnet routing notes
-* DNS behavior and troubleshooting
+- [Monitoring Stack](docs/monitoring-stack.md) — Prometheus, Grafana, Loki, Promtail, cAdvisor, Node Exporter, Pi-hole Exporter, and SNMP Exporter.
 
----
-
-## Self-Hosted Applications
-
-The lab includes several self-hosted applications used either for real home use or technical experimentation.
-
-Examples:
-
-* Immich for photo backup
-* Pi-hole for DNS filtering
-* Open-WebUI and Ollama for local AI testing
-* Home Assistant for home automation
-* Portainer for container management
-* Wyze Bridge for camera experimentation
-
-Each major service should eventually have its own short writeup covering:
-
-* Why it was added
-* Where it runs
-* How it is accessed
-* What data it depends on
-* What issues came up
-* What would be improved next
-
----
-
-## Troubleshooting Log
-
-This section will collect real problems encountered while building and maintaining the lab. The goal is to show the practical troubleshooting process, not just the final working state.
-
-Examples to document:
-
-* Pi-hole query visibility stopped working and required reload/troubleshooting.
-* Prometheus failed to start because of YAML config errors.
-* Grafana needed a non-default host port because Open-WebUI already used `3000`.
-* Prometheus needed `9091` because `9090` was already occupied on the host.
-* Tailscale mobile DNS/subnet routing caused internet access issues until settings were adjusted.
-* Wyze Bridge camera streams were unreliable, especially with wired cameras and changing Wyze behavior.
-* Immich remote access required careful planning around family usability and secure access.
-
----
-
-## Documentation Roadmap
-
-* [ ] Add sanitized network diagram
-* [ ] Add hardware inventory
-* [ ] Add Docker service inventory
-* [ ] Document Pi-hole setup and troubleshooting
-* [ ] Document Prometheus/Grafana/Loki monitoring stack
-* [ ] Document Tailscale remote access setup
-* [ ] Document Immich photo backup workflow
-* [ ] Document Synology storage and backup plan
-* [ ] Document Open-WebUI/Ollama local AI setup
-* [ ] Add screenshots with sensitive information removed
-* [ ] Add lessons learned section for each major service
-
----
-
-## Privacy and Sanitization
-
-Some details in this repository are intentionally generalized before publishing. This includes usernames, hostnames, internal IPs where appropriate, credentials, tokens, API keys, family information, serial numbers, account details, and screenshots that reveal private information.
-
-The goal is to document the technical architecture and troubleshooting process without exposing sensitive personal or network information.
